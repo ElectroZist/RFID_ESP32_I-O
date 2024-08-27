@@ -1,6 +1,3 @@
-////////////////// RFID CONNECTION //////////////////
-//////// rfid.begin (irq,sck,mosi,miso,nss,rst //////
-/////////////////////////////////////////////////////
 
 #include <rfid.h>
 #include <softspi.h>
@@ -65,13 +62,7 @@ int checkRFID(int i) {
 
   rfid.init();
   uchar status;
-  serNum[0] = 0;
-  serNum[1] = 0;
-  serNum[2] = 0;
-  serNum[3] = 0;
-  serNum[4] = 0;
-  serNum[5] = 0;
-
+ 
   uchar str[MAX_LEN];
   // Search card, return card types
   status = rfid.request(PICC_REQIDL, str);
